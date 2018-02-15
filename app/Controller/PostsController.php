@@ -12,7 +12,9 @@
 		}
 
 		/**
-		* Page accueil
+		* Home Page
+		* Template Default
+		* View Posts index
 		*/
 
 		public function index(){
