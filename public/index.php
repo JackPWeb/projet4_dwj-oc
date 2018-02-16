@@ -9,7 +9,7 @@
 		$page = $_GET['p'];
 	}
 	else{
-		$page = 'posts.index';
+		$page = 'home.index';
 	}
 
 	$page = explode('.', $page);

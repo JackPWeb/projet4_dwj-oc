@@ -1,0 +1,356 @@
+/**
+* ----------------------------------------------------------------------------------------
+*    Fonts - Gentium + Muli + Cinzel
+* ----------------------------------------------------------------------------------------
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic|Muli|Cinzel+Decorative:400,700');
+
+/**
+* ----------------------------------------------------------------------------------------
+*    Base
+* ----------------------------------------------------------------------------------------
+*/
+
+html{
+	font-family: 'Muli', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	font-style: normal;
+	line-height: 1.82em;
+    letter-spacing: 0;
+	color: #333;
+    background-color: #f7f7fa;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;  
+}
+
+h1, h2, h3, h4{
+	font-family: 'Cinzel Decorative', cursive;
+	font-weight: 700;
+	font-style: normal;
+    line-height: 1.4;
+    color: #222;
+}
+
+h1{
+    font-size: 46px;
+}
+
+h2{
+	font-size: 40px;
+}
+
+h3{
+	font-size: 34px;
+}
+
+h4{
+	font-size: 20px;
+}
+
+nav {
+    background-color: #61bfad;
+}
+
+section{
+	margin: 120px 0;
+}
+
+.section-title {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-title:first-letter {
+  	margin-right: -30px;
+  	font-size: 1.9em;
+  	padding: 0 30px;
+  	color: #61bfad;
+	border: 1px solid #61bfad;
+}
+
+.section-title .main-title{
+	margin-bottom: 50px;
+}
+
+.section-title .subtitle {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 3px dotted #61bfad;
+    letter-spacing: 4px;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+.more-link a, 
+.chapter-desc .subtitle{
+    position: relative;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-left: 50px;
+    color: #61bfad;
+}
+
+.more-link a:before, 
+.chapter-desc .subtitle:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 50%;
+    width: 40px;
+    height: 2px;
+    background-color: #61bfad;
+}
+
+/**
+* ----------------------------------------------------------------------------------------
+*    Parallax section
+* ----------------------------------------------------------------------------------------
+*/
+
+.overlay{
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.parallax-content{
+	position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+.parallax-content .section-title h1, 
+.parallax-content .subtitle{
+	color: #fff;
+}
+
+/**
+* ----------------------------------------------------------------------------------------
+*    Home - Intro
+* ----------------------------------------------------------------------------------------
+*/
+
+#intro{
+	margin: 0;
+}
+
+#intro .subtitle a {
+    color: #61bfad;
+    font-size: 14px;
+    cursor: help;
+    letter-spacing: 2px;
+}
+
+/**
+* ----------------------------------------------------------------------------------------
+*    Home - Section About
+* ----------------------------------------------------------------------------------------
+*/
+
+.about-desc {
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.66em;
+    letter-spacing: 0.02em;
+    font-family: Gentium Book Basic;
+    margin: 1.78rem 0 1.424rem 0;
+}
+
+.about-pict {
+    box-shadow: 15px 15px 0px 0px #61bfad;
+    overflow: hidden;
+}
+
+.about-pict img{
+	margin-bottom: -10px;
+	backface-visibility: hidden;
+	transition: all 0.5s ease-in-out;
+}
+
+.about-pict:hover img{
+	transform: scale(1.15);
+}
+
+/**
+* ----------------------------------------------------------------------------------------
+*    Home - Section Last Chapter
+* ----------------------------------------------------------------------------------------
+*/
+
+.chapter-desc{
+	display: inline-block;
+    position: relative;
+    box-shadow: 15px 15px 0px 0px #61bfad;
+    margin: 0 .75rem;
+}
+
+.chapter-desc a{
+    position: relative;
+    overflow: hidden;
+    float: left;
+}
+
+.chapter-desc img{
+	display: block;
+    backface-visibility: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.chapter-desc .infos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.chapter-desc .infos h3{
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.chapter-desc:hover .infos {
+	opacity: 1;
+  	background: rgba(0, 0, 0, 0.6);
+}
+
+.chapter-desc:hover img {
+  	transform: scale(1.15);        
+}
+
+.chapter-desc .subtitle{
+    font-size: 13px;
+    color: #fff;
+}
+
+/**
+* ----------------------------------------------------------------------------------------
+*    Chapters Page
+* ----------------------------------------------------------------------------------------
+*/
+
+.card{
+    box-shadow: none;
+    background-color: #f7f7fa;
+    margin-bottom: 50px;
+}
+
+.card .card-image{
+    overflow: hidden;
+}
+
+.card .card-image img {
+    max-height: 545px;
+    backface-visibility: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.card .card-image:hover img {
+    transform: scale(1.15);      
+}
+
+.card .card-image .card-title {
+    background-color: #f7f7fa;
+    color: #333;
+    border-top: 3px solid #61bfad;
+    border-right: 3px solid #61bfad;
+}
+
+.card .card-image .card-title span{
+    border-bottom: 3px dotted #61bfad;
+    padding: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.post-title, .post-title a{
+    position: relative;
+    font-family: 'Gentium Book Basic', serif;
+    font-style: normal;
+    color: #222;
+}
+
+.post-title:before{
+    position: absolute;
+    content: '';
+    bottom: 20%;
+    left: 0;
+    right: 0;
+    opacity: .6;
+    height: 30%;
+    background-color: #ddd;
+    background-image: radial-gradient(circle at 100% 150%, #ddd 24%, white 25%, white 28%, #ddd 29%, #ddd 36%, white 36%, white 40%, transparent 40%, transparent), radial-gradient(circle at 0 150%, #ddd 24%, white 25%, white 28%, #ddd 29%, #ddd 36%, white 36%, white 40%, transparent 40%, transparent), radial-gradient(circle at 50% 100%, white 10%, #ddd 11%, #ddd 23%, white 24%, white 30%, #ddd 31%, #ddd 43%, white 44%, white 50%, #ddd 51%, #ddd 63%, white 64%, white 71%, transparent 71%, transparent), radial-gradient(circle at 100% 50%, white 5%, #ddd 6%, #ddd 15%, white 16%, white 20%, #ddd 21%, #ddd 30%, white 31%, white 35%, #ddd 36%, #ddd 45%, white 46%, white 49%, transparent 50%, transparent), radial-gradient(circle at 0 50%, white 5%, #ddd 6%, #ddd 15%, white 16%, white 20%, #ddd 21%, #ddd 30%, white 31%, white 35%, #ddd 36%, #ddd 45%, white 46%, white 49%, transparent 50%, transparent);
+    background-size: 50px 25px;
+}
+
+.card-content .more-link{
+    margin-top: 0;
+}
+
+/**
+* ----------------------------------------------------------------------------------------
+*    Footer
+* ----------------------------------------------------------------------------------------
+*/
+
+.page-footer{
+	padding-top: 0;
+	background-color: #f7f7fa;
+	border-top: 3px dotted #61bfad;
+}
+
+.page-footer .footer-copyright{
+	padding-top: 20px;
+    padding-bottom: 0;
+    color: #222;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/**
+* ----------------------------------------------------------------------------------------
+*    Media Queries
+* ----------------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 600px) {
+
+}
+
+@media only screen and (max-width: 992px){
+	.chapter-desc{
+		margin-bottom: 50px;
+	}
+}
+
+@media only screen and (min-width: 993px){
+	.more-link{
+		margin-top: 50px;
+	}
+}
+
+@media only screen and (min-width: 1200px){
+
+}
