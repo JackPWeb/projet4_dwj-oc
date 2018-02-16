@@ -34,6 +34,8 @@
 
     <?= $content; ?>
  
+    <a id="back-to-top" href="#" class="btn-floating btn-large waves-effect waves-light tooltipped" title="retourner en haut de page" data-position="right" data-delay=".5" data-tooltip="Retour"><i class="material-icons">arrow_upward</i></a>
+
     <footer class="page-footer">
         <div class="footer-copyright">
             <div class="container">

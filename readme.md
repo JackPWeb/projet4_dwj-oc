@@ -1,5 +1,7 @@
 Maj
 
-- Modification du PostsController / affichages de la liste des chapitres
-- Création du HomeController / affichage de la home et habillage de la vue
-- Création de la vue chapters et habillage
+- Modification PostsController - Prise en charge de la single page
+- Ajout de la vue single et habillage
+- Ajout des requêtes preparées dans Database
+- Amélioration des fonctionnalités - Nav / Back to top / Flow text
+- Maj app.js / app.css
