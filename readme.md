@@ -1,5 +1,5 @@
 Maj
 
-- Ajout des fichiers Css / Js / img dans le dossier public.
-- Amélioration de la home page et modification du template par défaut.
-- Ajout méthodes du post entity
+- Modification du PostsController / affichages de la liste des chapitres
+- Création du HomeController / affichage de la home et habillage de la vue
+- Création de la vue chapters et habillage
