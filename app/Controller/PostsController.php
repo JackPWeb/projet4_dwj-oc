@@ -9,6 +9,7 @@
 			parent::__construct();
 
 			$this->loadModel('Post');
+			$this->loadModel('Comment');
 		}
 
 		/**
@@ -35,12 +36,15 @@
 		public function single(){
 			$post = $this->Post->find($_GET['id']);
 
+			$comments = $this->Comment->find($_GET['id']);
+			$nbComments = $this->Comment->countComments($_GET['id']);
+
 			$prev = $this->Post->prevPost(htmlspecialchars($_GET['id']));
 			$next = $this->Post->nextPost(htmlspecialchars($_GET['id']));
 
 			$title = $this->pageTitle($post->title);
 
-			$this->render('posts.single', compact('post', 'title', 'prev', 'next'));
+			$this->render('posts.single', compact('post', 'comments', 'nbComments', 'title', 'prev', 'next'));
 		}
 
 	}
