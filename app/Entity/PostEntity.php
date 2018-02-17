@@ -33,4 +33,27 @@
 			return $html;
 		}
 
+		public function getPrev(){
+								
+			$html = '<a class="nav-previous" href="' . $this->getUrl() . '" title="'. $this->title .'">';
+			$html .= '<i class="material-icons">chevron_left</i>';
+			$html .= '<span class="meta-nav">Précédant</span>';
+			$html .= '<h4 class="link-title">' . $this->title .'</h4>';
+			$html .= '</a>';
+
+			return $html;
+		}
+
+		public function getNext(){
+			
+			$html = '<a class="nav-next" href="' . $this->getUrl() . '" title="'. $this->title .'">';
+
+			$html .= '<i class="material-icons">chevron_right</i>';
+			$html .= '<span class="meta-nav">Suivant</span>';
+			$html .= '<h4 class="link-title">' . $this->title .'</h4>';
+			$html .= '</a>';
+
+			return $html;			
+		}
+
 	}

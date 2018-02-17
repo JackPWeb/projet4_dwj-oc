@@ -18,11 +18,12 @@
 		*/
 
 		public function index(){
-			$posts = $this->Post->all();
+			$posts = $this->Post->allPublic();
+			$totalPost = $this->Post->countPublicPosts();
 
 			$title = $this->pageTitle('Chapitres');
 
-			$this->render('posts.index', compact('posts', 'title'));
+			$this->render('posts.index', compact('posts', 'totalPost', 'title'));
 		}
 
 		/**
@@ -34,9 +35,12 @@
 		public function single(){
 			$post = $this->Post->find($_GET['id']);
 
+			$prev = $this->Post->prevPost(htmlspecialchars($_GET['id']));
+			$next = $this->Post->nextPost(htmlspecialchars($_GET['id']));
+
 			$title = $this->pageTitle($post->title);
 
-			$this->render('posts.single', compact('post', 'title'));
+			$this->render('posts.single', compact('post', 'title', 'prev', 'next'));
 		}
 
 	}

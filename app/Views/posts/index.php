@@ -5,7 +5,7 @@
 
 				<div class="section-title">
 					<h1 class="main-title">Chapitres</h1>
-					<div class="subtitle">La liste des chapitres</div>
+					<div class="subtitle">La liste des <?= $totalPost[0]->nbPost; ?> chapitres</div>
 				</div>
 			
 				<?php foreach ($posts as $post): ?>
