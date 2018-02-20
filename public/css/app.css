@@ -103,6 +103,10 @@ section{
     background-color: #61bfad;
 }
 
+.front-bg-color{
+    background-color: #61bfad;
+}
+
 /**
 * ----------------------------------------------------------------------------------------
 *    Nav
@@ -328,6 +332,60 @@ nav.hidden {
     margin-top: 20px;
 }
 
+#chapters-list .ias-trigger.ias-trigger-next a{
+    position: relative;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-left: 50px;
+    color: #61bfad;
+    padding-right: 50px;
+}
+
+#chapters-list .ias-trigger.ias-trigger-next a:before, 
+#chapters-list .ias-trigger.ias-trigger-next a:after{
+    position: absolute;
+    content: '';
+    top: 50%;
+    width: 40px;
+    height: 2px;
+    background-color: #61bfad;
+}
+
+#chapters-list .ias-trigger.ias-trigger-next a:before{
+    left: 0;
+}
+
+#chapters-list .ias-trigger.ias-trigger-next a:after{
+    right: 0;
+}
+
+/**
+* ----------------------------------------------------------------------------------------
+*    Pagination Chapter Page
+* ----------------------------------------------------------------------------------------
+*/
+
+.pagination li.disabled span{
+    color: #e8e8ea;
+    cursor: default;
+}
+
+.pagination li.active {
+    background-color: #61bfad;
+}
+
+.pagination li span{
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 0 10px;
+    line-height: 30px;
+}
+
+.pagination li.active span{
+    color: #fff;
+}
+
 /**
 * ----------------------------------------------------------------------------------------
 *    Single Page
@@ -354,6 +412,97 @@ nav.hidden {
     padding-right: 10px;
     color: #61bfad;
 }
+
+/**
+* ----------------------------------------------------------------------------------------
+*    Commentaires Single Page
+* ----------------------------------------------------------------------------------------
+*/
+
+.commentaires-title h3{
+    border-bottom: 3px dotted #61bfad;
+    padding: 4px;
+    margin-bottom: 60px;
+}
+
+.commentaires-list .collection{
+    border: none;
+}
+
+.commentaires-list .collection .collection-item{
+    margin-bottom: 15px;
+}
+
+.commentaires-list .collection .collection-item .commentaire-title{
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.commentaires-list .collection .collection-item .commentaire-postedAt{
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 700;
+}
+
+#commentaire-list .collection .collection-item .commentaire-comment{
+    
+}
+
+.commentaires-list .collection .collection-item:last-child {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.commentaires-list .collection .collection-item .comment-report{
+    color: #e8e8ea;
+}
+
+/**
+* ----------------------------------------------------------------------------------------
+*    Form
+* ----------------------------------------------------------------------------------------
+*/
+
+input:not([type]), 
+input[type=text]:not(.browser-default), 
+input[type=password]:not(.browser-default), 
+textarea.materialize-textarea, 
+input[type=text].valid:not(.browser-default){
+    background-color: #fff;
+    border-bottom: 1px solid #e8e8ea;
+    box-shadow: none;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]), 
+input[type=password]:not(.browser-default):focus:not([readonly]), 
+textarea.materialize-textarea:focus:not([readonly]){
+    border-bottom: 1px solid #61bfad;
+    box-shadow: 0 1px 0 0 #61bfad;
+}
+
+.input-field label {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+    padding-left: 15px;
+    letter-spacing: 0.2em;
+    font-size: 13px;
+    color: #333;
+}
+
+.input-field label:not(.label-icon).active{
+    -webkit-transform: translateY(-34px) scale(0.8);
+    transform: translateY(-34px) scale(0.8);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+/**
+* ----------------------------------------------------------------------------------------
+*    Flow Toggle + Back To Top
+* ----------------------------------------------------------------------------------------
+*/
 
 #flow-toggle, 
 #back-to-top{

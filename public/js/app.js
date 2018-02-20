@@ -132,4 +132,26 @@ $(document).ready(function(){
   		prev = scrollTop;
 	});
 
+	/**
+	* ----------------------------------------------------------------------------------------
+	*    Scroll Ajax 
+	* ----------------------------------------------------------------------------------------
+	*/
+
+	var ias = jQuery.ias({
+  		container:  '#chapters-list',
+  		item:       '.single-chapter',
+  		pagination: '#pagination-chapter',
+  		next:       '.suivant'
+	});
+
+	ias.extension(new IASSpinnerExtension({
+	    src: 'img/loader.gif'
+	}));
+
+	ias.extension(new IASTriggerExtension({
+	    text: 'Afficher les autres chapitres',
+	    offset: 1
+	}));
+
 });

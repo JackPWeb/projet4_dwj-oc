@@ -48,14 +48,10 @@
 						}
 					?>
 				</div>
-
-				<div class="more-link right-align">
-					<a href="?p=posts.index">Retourner aux chapitres</a>
-				</div>
 			</div>
 		</div>
 
-		<a id="flow-toggle" class="btn-floating btn-large waves-effect waves-light tooltipped" title="Augmenter la taille du texte" data-position="right" data-delay=".5" data-tooltip="Loupe"><i class="material-icons">loupe</i></a>
+		<a id="flow-toggle" class="btn-floating btn-large waves-effect waves-light tooltipped front-bg-color" title="Augmenter la taille du texte" data-position="right" data-delay=".5" data-tooltip="Loupe"><i class="material-icons">loupe</i></a>
 	</div>
 </section>
 
@@ -117,6 +113,42 @@
 					    </div>
 				  	</div>
 
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="commentaires-form">
+	<div class="container">
+		<div class="row">
+			<div class="col s12">
+
+				<div class="commentaires-title">
+					<h3>Laisser un commentaire:</h3>
+				</div>
+
+				<div class="commentaires-form-content">
+							    	
+			    	<form method="post">
+						<div class="row">
+							<div class="input-field col s12">
+								<?= $form->input('author', 'Votre Pseudo'); ?>
+							</div>
+
+							<div class="input-field col s12">
+								<?= $form->input('comment', 'Votre commentaire', ['type' => 'textarea']); ?>
+							</div>
+
+							<div class="input-field col s12">
+								<?= $form->submit('Commenter'); ?>
+							</div>
+						</div>
+					</form>
+				  	
+				</div>
+				<div class="more-link right-align">
+					<a href="?p=posts.index">Retourner aux chapitres</a>
 				</div>
 			</div>
 		</div>
