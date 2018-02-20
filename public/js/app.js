@@ -154,4 +154,18 @@ $(document).ready(function(){
 	    offset: 1
 	}));
 
+	
+	/**
+	* ----------------------------------------------------------------------------------------
+	*    Ajax Report Comment
+	* ----------------------------------------------------------------------------------------
+	*/
+
+	$(".signaled").click(function(){
+    	var id = $(this).attr("id");
+    	$.post('?p=posts.reported', {id:id});
+    	
+    	$(this).addClass('comment-report').attr('title', 'Ce Commentaire à été signalé').prop('onclick', null).removeClass('signaled');
+    });
+
 });

@@ -80,6 +80,12 @@
 			$this->render('posts.single', compact('post', 'comments', 'nbComments', 'title', 'prev', 'next', 'form'));
 		}
 
+		public function reported(){
+			$post = $this->Post->find($_GET['id']);
+
+			$result = $this->Comment->report();
+		}
+
 	}
 
 

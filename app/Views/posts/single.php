@@ -78,13 +78,13 @@
 
 						      		<?php if ($comment->signaled == '1'){
 						      			?>
-											<a id="<?= $comment->id; ?>" class="secondary-content tooltipped disabled comment-report" data-position="left" data-delay="50" data-tooltip="Ce Commentaire à été signalé">
+											<a id="<?= $comment->id; ?>" class="secondary-content comment-report" title="Ce Commentaire à été signalé">
 						      					<i class="material-icons">record_voice_over</i>
 						      				</a>
 						      			<?php
 						      		}else{
 						      			?>
-											<a href="#modal1" id="<?= $comment->id; ?>" class="secondary-content tooltipped signaled modal-trigger" data-position="left" data-delay="50" data-tooltip="Signaler ce commentaire">
+											<a id="<?= $comment->id; ?>" class="secondary-content signaled" title="Signaler ce commentaire" onclick="Materialize.toast('Ce Commentaire à été signalé', 3000)">
 						      					<i class="material-icons">record_voice_over</i>
 						      				</a>
 						      			<?php
@@ -103,15 +103,6 @@
 						}
 						?>    		
 				  	</ul>
-
-				  	<div id="modal1" class="modal">
-					    <div class="modal-content">
-					      	<h4>Ce Commentaire viens d'etre Signalé</h4>
-					    </div>
-					    <div class="modal-footer">
-					      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fermer</a>
-					    </div>
-				  	</div>
 
 				</div>
 			</div>

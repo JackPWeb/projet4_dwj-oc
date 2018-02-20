@@ -27,4 +27,12 @@
 			return $this->query("SELECT COUNT(id) as total FROM comments WHERE post_id = ?", [$id], true);	
 		}
 
+		/**
+		* Report le commentaire signaler
+		*/
+
+	  	public function report(){
+	  		return $this->query("UPDATE comments SET signaled='1' WHERE id='{$_POST['id']}'");
+	  	}
+
 	}

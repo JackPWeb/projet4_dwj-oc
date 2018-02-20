@@ -1,14 +1,7 @@
-Maj
-
-Maj page chapters :
-
-- Finition de la page chapters + ajout de la pagination en ajax
-- Maj PostsController -> index -> ajout de la pagination
-
 Maj page single :
 
-- Maj Style général
-- Préparation des commentaires à report
-- Prise en charge des commentaires + affichage du form
-- Ajout Core -> Html -> form, pour la gestion du form
-- Maj PostsController -> single -> ajout du traitement du form + affichage
+- Ajout traitement des commentaires à report en ajax
+- Maj app.js
+- Ajout PostsController -> reported -> update des commentaires report
+- Ajout CommentTable -> report
+- Maj app.css
