@@ -105,6 +105,34 @@
 				  	</ul>
 
 				</div>
+
+				<ul class="pagination right-align">
+			  	<?php
+			  		if ($pageCourante == 1) {
+			  			echo '<li class="disabled"><span><i class="material-icons">chevron_left</i></span></li>';
+			  		}
+			  		else{
+			  			echo '<li class="waves-effect"><a href="index.php?p=posts.single&id='.$post->id.'&page='.($pageCourante-1).'"><i class="material-icons">chevron_left</i></a></li>';
+			  		}
+			  		
+			  		for ($i=1; $i <= $pagesTotales; $i++) { 
+			  			if ($i == $pageCourante) {
+			  				echo '<li class="active"><span>'.$i.'</span></li>';
+			  			}
+			  			else{
+			  				echo '<li class="waves-effect"><a href="index.php?p=posts.single&id='.$post->id.'&page='.$i.'">'.$i.'</a></li>';
+			  			}
+			  		};
+
+			  		if ($pageCourante == $pagesTotales) {
+			  			echo '<li class="disabled"><span><i class="material-icons">chevron_right</i></span></li>';
+			  		}
+			  		else{
+			  			echo '<li class="waves-effect"><a href="index.php?p=posts.single&id='.$post->id.'&page='.($pageCourante+1).'"><i class="material-icons">chevron_right</i></a></li>';
+			  		}
+			  	?>
+			  	</ul>
+
 			</div>
 		</div>
 	</div>

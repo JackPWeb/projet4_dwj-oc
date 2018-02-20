@@ -35,4 +35,12 @@
 	  		return $this->query("UPDATE comments SET signaled='1' WHERE id='{$_POST['id']}'");
 	  	}
 
+	  	/**
+		* Recupere les commentaires du post associé puis limite en fonction de la pagination
+		*/
+
+	  	public function allCommentsByPost($id, $var){
+		    return $this->query("SELECT * FROM comments WHERE post_id = ? ORDER BY comment_date DESC LIMIT $var", [$id], false);
+	  	}
+
 	}

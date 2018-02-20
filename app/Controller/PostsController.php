@@ -54,8 +54,24 @@
 		public function single(){
 			$post = $this->Post->find($_GET['id']);
 
-			$comments = $this->Comment->find($_GET['id']);
+			$commentParPage = 3;
+
 			$nbComments = $this->Comment->countComments($_GET['id']);
+			$totalComment = $nbComments->total;
+
+			$pagesTotales = ceil($totalComment/$commentParPage);
+
+			if (isset($_GET['page']) AND !empty($_GET['page']) AND $_GET['page'] > 0 AND $_GET['page'] <= $pagesTotales) {
+				$_GET['page'] = intval($_GET['page']);
+				$pageCourante = $_GET['page'];
+			}else{
+				$pageCourante = 1;
+			}
+
+			$depart = ($pageCourante-1)*$commentParPage;
+			$limite = $depart .','. $commentParPage;
+
+			$comments = $this->Comment->allCommentsByPost($_GET['id'], $limite);
 
 			$prev = $this->Post->prevPost(htmlspecialchars($_GET['id']));
 			$next = $this->Post->nextPost(htmlspecialchars($_GET['id']));
@@ -77,14 +93,17 @@
 
 			$form = new MaterializeForm($_POST);
 
-			$this->render('posts.single', compact('post', 'comments', 'nbComments', 'title', 'prev', 'next', 'form'));
+			$this->render('posts.single', compact('post', 'comments', 'nbComments', 'title', 'prev', 'next', 'form', 'pagesTotales', 'pageCourante'));
 		}
 
+		/**
+		* Update Comment
+		*/
 		public function reported(){
-			$post = $this->Post->find($_GET['id']);
-
 			$result = $this->Comment->report();
 		}
+
+		
 
 	}
 
