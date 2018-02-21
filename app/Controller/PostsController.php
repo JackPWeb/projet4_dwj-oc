@@ -82,22 +82,35 @@
 
 			$title = $this->pageTitle($post->title);
 
-			if (!empty($_POST)) {
+			$form = new MaterializeForm();
 
-				$result = $this->Comment->create([
-					'author' => htmlspecialchars(trim($_POST['author'])), 
-					'comment' => htmlspecialchars(trim($_POST['comment'])),
-					'post_id' => $_GET['id']
-				]);
+			if (isset($_POST['submit'])) {
 
-				if ($result) {
-					header("Location: index.php?p=posts.single&id=" . $_GET['id']);
+				$errors = [];
+
+				if (empty($_POST['author']) AND !empty($_POST['comment'])) {
+					$errors['empty-author'] = "Vous devez indiquer votre pseudo";
+				}
+				elseif (!empty($_POST['author']) AND empty($_POST['comment'])) {
+					$errors['empty-comment'] = "Vous devez indiquer votre commentaire";
+				}
+				elseif (empty($_POST['author']) || empty($_POST['comment'])){
+					$errors['empty'] = "Tous les champs ne sont pas remplis";
+				}
+				else{
+					$result = $this->Comment->create([
+						'author' => htmlspecialchars(trim($_POST['author'])), 
+						'comment' => htmlspecialchars(trim($_POST['comment'])),
+						'post_id' => intval($_POST['post_id']),
+					]);
+
+					if ($result) {
+						header("Location: index.php?p=posts.single&id=" . $_GET['id']);
+					}
 				}
 			}
 
-			$form = new MaterializeForm($_POST);
-
-			$this->render('posts.single', compact('post', 'comments', 'nbComments', 'title', 'prev', 'next', 'form', 'pagesTotales', 'pageCourante'));
+			$this->render('posts.single', compact('post', 'comments', 'nbComments', 'title', 'prev', 'next', 'form', 'errors', 'pagesTotales', 'pageCourante'));
 		}
 
 		/**

@@ -149,6 +149,14 @@
 					<h3>Laisser un commentaire:</h3>
 				</div>
 
+				<?php
+				if (!empty($errors)) {
+					foreach ($errors as $error) {
+						echo '<div class="error-message red darken-1"><p><i class="material-icons">error_outline</i> '.$error.'</p></div>';
+					}
+				}
+				?>
+
 				<div class="commentaires-form-content">
 							    	
 			    	<form method="post">
@@ -159,6 +167,10 @@
 
 							<div class="input-field col s12">
 								<?= $form->input('comment', 'Votre commentaire', ['type' => 'textarea']); ?>
+							</div>
+
+							<div class="input-field col s12">
+								<?= $form->input('post_id', '', ['value' => $_GET['id'], 'type' => 'hidden']); ?>
 							</div>
 
 							<div class="input-field col s12">

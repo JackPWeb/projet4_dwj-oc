@@ -18,6 +18,10 @@
 		    return $this->query("SELECT * FROM posts ORDER BY title DESC");
 	  	}
 
+	  	public function find($id){
+			return $this->query("SELECT * FROM posts WHERE id = ? AND posted= '1'", [$id], true);
+		}
+
 	  	/**
 		* Recupere tous les articles uniquement public
 		*/

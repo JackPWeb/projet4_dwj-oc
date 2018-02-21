@@ -1,6 +1,14 @@
-Maj page single :
+Maj
 
-- Ajout condition pour l'affichage de la pagination sur la vue
-- Maj PostsController -> single -> notFound
-- Maj Core -> Controller -> notFound -> ajout 404
-- Ajout template notFound + page 404 + style 
+PostTable :
+- Modification find() -> affiche uniquement les articles public.
+
+PostsController :
+- Ajout des erreurs et modification pour le traitement du formulaire.
+- Empeche l'envoi du formulaire si c'est le cas.
+
+Single.php :
+
+Affichage des erreurs si c'est le cas
+
+Maj App.css + App.js avec les derniers changements

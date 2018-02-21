@@ -168,4 +168,16 @@ $(document).ready(function(){
     	$(this).addClass('comment-report').attr('title', 'Ce Commentaire à été signalé').prop('onclick', null).removeClass('signaled');
     });
 
+	/**
+	* ----------------------------------------------------------------------------------------
+	*    Error Message
+	* ----------------------------------------------------------------------------------------
+	*/
+
+    if ($('.error-message').length) {
+    	$('html, body').animate({
+	        scrollTop: $('.error-message').offset().top
+	    }, 1000);
+    }
+
 });
