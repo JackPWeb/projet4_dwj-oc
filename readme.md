@@ -1,6 +1,6 @@
 Maj page single :
 
-- Ajout de la pagination des commentaires dans la vue
-- Maj PostsController -> single -> ajout de la pagination
-- Maj CommentTable
-- Maj app.css
+- Ajout condition pour l'affichage de la pagination sur la vue
+- Maj PostsController -> single -> notFound
+- Maj Core -> Controller -> notFound -> ajout 404
+- Ajout template notFound + page 404 + style 

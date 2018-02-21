@@ -54,6 +54,10 @@
 		public function single(){
 			$post = $this->Post->find($_GET['id']);
 
+			if (empty($post)) {
+				$this->notFound();
+			}
+
 			$commentParPage = 3;
 
 			$nbComments = $this->Comment->countComments($_GET['id']);

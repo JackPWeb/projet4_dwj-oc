@@ -684,6 +684,32 @@ textarea.materialize-textarea:focus:not([readonly]){
 
 /**
 * ----------------------------------------------------------------------------------------
+*    404
+* ----------------------------------------------------------------------------------------
+*/
+
+#not-found .container{
+    background-color: #fff;
+}
+
+#not-found .main-title{
+    font-size: 64px;
+    margin-top: 50px;
+}
+
+#not-found .more-link{
+    padding-bottom: 50px;
+}
+
+footer.position-absolute{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+/**
+* ----------------------------------------------------------------------------------------
 *    Media Queries
 * ----------------------------------------------------------------------------------------
 */

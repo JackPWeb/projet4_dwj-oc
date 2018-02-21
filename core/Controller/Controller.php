@@ -26,7 +26,13 @@
 
 	    protected function notFound(){
 	    	header('HTTP/1.0 404 Not Found');
-	    	die('Page Introuvable');
+
+	    	$this->template = 'notFound';
+
+	    	$title = $this->pageTitle('Page Introuvable');
+
+	    	$this->render('404', compact('title'));
+	    	die();
 	    }
 
 	}
