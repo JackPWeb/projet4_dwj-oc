@@ -3,6 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <link rel="shortcut icon" href="img/favicon.jpg">
     <title><?= $title; ?></title>
     
     <!-- CSS  -->
@@ -15,9 +16,14 @@
 </head>
 
 <body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
     
     <nav role="navigation">
-        <div class="nav-wrapper container"><a id="logo-container" href="index.php" class="brand-logo">Logo</a>
+        <div class="nav-wrapper container"><a id="logo-container" href="index.php" title="Retourner à la page d'accueil" class="brand-logo">J~Forteroche</a>
             <ul class="right hide-on-med-and-down">
                 <li class="active"><a href="index.php">Accueil</a></li>
                 <li><a href="?p=posts.index">Chapitres</a></li>
