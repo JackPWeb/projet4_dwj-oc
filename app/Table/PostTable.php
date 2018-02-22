@@ -69,5 +69,13 @@
 	  	public function nextPost($id){
 		    return $this->query("SELECT * FROM posts WHERE id > ? AND posted='1' ORDER BY id ASC LIMIT 0, 1", [$id], true);	    
 	  	}
+
+	  	/**
+		* Publie l'article
+		*/
+
+	  	public function publish(){
+	  		return $this->query("UPDATE posts SET posted='1' WHERE id='{$_POST['publish-chapter_id']}'");
+	  	}
 	
 	}

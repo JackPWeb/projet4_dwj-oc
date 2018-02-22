@@ -420,6 +420,10 @@ nav .brand-logo{
     color: #61bfad;
 }
 
+.post-content p.flow-text{
+    line-height: 2.5rem;
+}
+
 /**
 * ----------------------------------------------------------------------------------------
 *    Commentaires Single Page
@@ -517,6 +521,7 @@ textarea.materialize-textarea:focus:not([readonly]){
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
     opacity: 0;
+    display: none;
 }
 
 #back-to-top{
@@ -528,12 +533,14 @@ textarea.materialize-textarea:focus:not([readonly]){
     -webkit-animation-name: slideInLeft;
     animation-name: slideInLeft;
     opacity: 1;
+    display: block;
 }
 
 #flow-toggle.slideOutLeft, 
 #back-to-top.slideOutLeft {
     -webkit-animation-name: slideOutLeft;
     animation-name: slideOutLeft;
+    display: block;
 }
 
 @keyframes slideInLeft {
@@ -827,28 +834,25 @@ textarea.materialize-textarea:focus:not([readonly]){
 
 /**
 * ----------------------------------------------------------------------------------------
-*    404
+*    404 - 403
 * ----------------------------------------------------------------------------------------
 */
 
-#not-found .container{
+#not-found .container, 
+#forbidden .container{
     background-color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 }
 
-#not-found .main-title{
+#not-found .main-title, 
+#forbidden .main-title{
     font-size: 64px;
     margin-top: 50px;
 }
 
-#not-found .more-link{
+#not-found .more-link, 
+#forbidden .more-link{
     padding-bottom: 50px;
-}
-
-footer.position-absolute{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
 }
 
 /**
@@ -934,11 +938,15 @@ footer.position-absolute{
 */
 
 .info-com{
-    background-image: linear-gradient(90deg,#4cc4ff,#4ca6ff) !important;
+    background-image: linear-gradient(90deg,#4cc4ff,#4ca6ff);
 }
 
 .info-post{
-    background-image: linear-gradient(90deg,#40dcb2,#40dc7e) !important;
+    background-image: linear-gradient(90deg,#40dcb2,#40dc7e);
+}
+
+.info-com, .info-post{
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 }
 
 .info-com .card-action, .info-post .card-action{
@@ -992,6 +1000,14 @@ footer.position-absolute{
     right: auto;
     max-width: 100%;
     height: auto;
+}
+
+.form-action{
+    display: flex;
+}
+
+.form-action form:first-of-type{
+    margin-right: 10px;
 }
 
 /**

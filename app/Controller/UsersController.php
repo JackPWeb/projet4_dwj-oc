@@ -8,7 +8,7 @@
 
 	class UsersController extends AppController{
 
-		protected $template = 'login';
+		protected $template = 'empty';
 
 		public function login(){
 			$title = $this->pageTitle('Connexion');

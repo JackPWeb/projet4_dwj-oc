@@ -21,13 +21,19 @@
 
 		protected function forbidden(){
 	    	header('HTTP/1.0 403 Forbidden');
-	    	die('Acces interdit');
+
+	    	$this->template = 'empty';
+
+	    	$title = $this->pageTitle('Acces interdit');
+
+	    	$this->render('403', compact('title'));
+	    	die();
 	    }
 
 	    protected function notFound(){
 	    	header('HTTP/1.0 404 Not Found');
 
-	    	$this->template = 'notFound';
+	    	$this->template = 'empty';
 
 	    	$title = $this->pageTitle('Page Introuvable');
 

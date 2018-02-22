@@ -36,6 +36,14 @@
 	  	}
 
 	  	/**
+		* Annule le commentaire signaler
+		*/
+
+	  	public function cancelReport(){
+	  		return $this->query("UPDATE comments SET signaled='0' WHERE id='{$_POST['valid-signaled_id']}'");
+	  	}
+
+	  	/**
 		* Recupere les commentaires du post associé puis limite en fonction de la pagination
 		*/
 

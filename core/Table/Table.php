@@ -56,4 +56,8 @@
 			return $this->query("SELECT COUNT(id) as nbTotal FROM {$this->table}");
 		}
 
+		public function delete($id){
+			return $this->query("DELETE FROM {$this->table} WHERE id = ?", [$id], true);
+		}
+
 	}

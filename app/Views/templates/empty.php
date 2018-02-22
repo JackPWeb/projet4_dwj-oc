@@ -29,6 +29,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
     <script src="js/app.js"></script>
-
+    
 </body>
 </html>

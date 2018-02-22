@@ -43,29 +43,47 @@
 							      	<div class="collapsible-header white-text active"><i class="material-icons">announcement</i>Commentaires Signaler</div>
 							      	<div class="collapsible-body">
 							      		<table class="highlight">
-							      			<thead>
-										  		<tr>
-										      		<th>Chapitre</th>
-										      		<th>Posté le</th>
-										      		<th>Autheur</th>
-										      		<th>Commentaire</th>
-										      		<th>Actions</th>
-										  		</tr>
-											</thead>
-											<tbody>
-										  		<?php foreach ($comments_signaled as $comment_signaled): ?>
-										  			<tr>
-											    		<td><?= $comment_signaled->post_id; ?></td>
-											    		<td><?= $comment_signaled->date; ?></td>
-											    		<td><?= $comment_signaled->author; ?></td>
-											    		<td><?= $comment_signaled->excerpt; ?></td>
-											    		<td>
-											    			<a href="#" class="btn-floating green valid_comment"><i class="material-icons">check</i></a>
-											    			<a href="#" class="btn-floating red delete_comment"><i class="material-icons">delete</i></a>
-											    		</td>
+							      			<?php 
+									  			if (!empty($comments_signaled)) {
+									  				?>
+								      			<thead>
+											  		<tr>
+											      		<th>Chapitre</th>
+											      		<th>Posté le</th>
+											      		<th>Autheur</th>
+											      		<th>Commentaire</th>
+											      		<th>Actions</th>
 											  		</tr>
-										  		<?php endforeach ?>
-											</tbody>
+												</thead>
+												<tbody>
+											  		<?php foreach ($comments_signaled as $comment_signaled): ?>
+											  			<tr>
+												    		<td><?= $comment_signaled->post_id; ?></td>
+												    		<td><?= $comment_signaled->date; ?></td>
+												    		<td><?= $comment_signaled->author; ?></td>
+												    		<td><?= $comment_signaled->excerpt; ?></td>
+												    		<td>
+												    			<div class="form-action">
+													    			<form action="?p=admin.home.deleteReport" method="post">
+													    				<input type="hidden" name="cancel-signaled_id" value="<?= $comment_signaled->id; ?>">
+													    				<button class="btn-floating green" type="submit"><i class="material-icons">check</i></button>
+													    			</form>
+
+													    			<form action="?p=admin.home.delete" method="post">
+													    				<input type="hidden" name="signaled_id" value="<?= $comment_signaled->id; ?>">
+													    				<button class="btn-floating red" type="submit"><i class="material-icons">delete</i></button>
+													    			</form>
+													    		</div>
+												    		</td>
+												  		</tr>
+											  		<?php endforeach ?>
+										  		<?php
+												}
+										  		else{
+									  				echo "<thead><tr>Aucun commentaire n'a été signalé.</tr></thead>";
+									  			}
+									  			?>
+												</tbody>
 							      		</table>
 							      	</div>
 							    </li>
@@ -104,15 +122,24 @@
 													    		<td><?= $post->title; ?></td>
 													    		<td class="<?= $post->status; ?>"><?= $post->status; ?></td>
 													    		<td>
-													    			<a href="#" class="btn-floating green valid_comment"><i class="material-icons">publish</i></a>
-													    			<a href="#" class="btn-floating red delete_comment"><i class="material-icons">delete</i></a>
+													    			<div class="form-action">
+														    			<form action="?p=admin.home.publishChapter" method="post">
+														    				<input type="hidden" name="publish-chapter_id" value="<?= $post->id; ?>">
+														    				<button class="btn-floating green" type="submit"><i class="material-icons">publish</i></button>
+														    			</form>
+
+														    			<form action="?p=admin.home.delete" method="post">
+														    				<input type="hidden" name="unposted_id" value="<?= $post->id; ?>">
+														    				<button class="btn-floating red" type="submit"><i class="material-icons">delete</i></button>
+														    			</form>
+														    		</div>
 													    		</td>
 													  		</tr>
 									  					<?php
 									  				}
 									  			}
 									  			else{
-									  				echo "<thead><tr>Tous les chapitres sont publié.</tr></thead>";
+									  				echo "<thead><tr>Aucun chapitre en attente de publication.</tr></thead>";
 									  			}
 									  		?>
 											</tbody>
