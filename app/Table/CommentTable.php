@@ -43,4 +43,12 @@
 		    return $this->query("SELECT * FROM comments WHERE post_id = ? ORDER BY comment_date DESC LIMIT $var", [$id], false);
 	  	}
 
+	  	/**
+		* Recupere les commentaires signaler
+		*/
+
+		public function signaled(){
+		    return $this->query("SELECT * FROM comments WHERE signaled = '1' ORDER BY comment_date DESC");
+	  	}
+
 	}

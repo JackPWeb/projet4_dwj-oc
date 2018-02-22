@@ -716,10 +716,6 @@ textarea.materialize-textarea:focus:not([readonly]){
     transform: translateX(0);
 }
 
-#loader-wrapper.user-color .loader-section{
-    background-color: #64B5F6;
-}
-
 #loader-wrapper .loader-section.section-left {
     left: 0;
 }
@@ -875,6 +871,127 @@ footer.position-absolute{
 
 .error-message i{
     padding-right: 10px;
+}
+
+/**
+* ----------------------------------------------------------------------------------------
+*    Login Page
+* ----------------------------------------------------------------------------------------
+*/
+
+#login-section button{
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #61bfad;
+}
+
+#login-section button i{
+    padding-right: 10px;
+}
+
+#login-section .input-field .prefix{
+    margin-top: 10px;
+}
+
+#login-section .input-field label {
+    color: #b7b7b7;
+    padding-left: 0;
+}
+
+#login-section .input-field label:not(.label-icon).active{
+    transform: translateY(-20px) scale(.7);
+}
+
+/**
+* ----------------------------------------------------------------------------------------
+*    Admin Style
+* ----------------------------------------------------------------------------------------
+*/
+
+.admin-template .section-title:first-letter {
+    background-color: #fff;
+    color: #64b5f6;
+}
+
+.admin-template .section-title:first-letter, 
+.admin-template .subtitle, 
+.admin-template .page-footer{
+    border-color: #64b5f6;
+}
+
+.admin-template #loader-wrapper .loader-section{
+    background-color: #64b5f6;
+}
+
+/**
+* ----------------------------------------------------------------------------------------
+*    Admin Home
+* ----------------------------------------------------------------------------------------
+*/
+
+.info-com{
+    background-image: linear-gradient(90deg,#4cc4ff,#4ca6ff) !important;
+}
+
+.info-post{
+    background-image: linear-gradient(90deg,#40dcb2,#40dc7e) !important;
+}
+
+.info-com .card-action, .info-post .card-action{
+    background-image: inherit;  
+}
+
+.info-com .card-content .card-title, .info-post .card-content .card-title{
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.info-com .card-content p, .info-post .card-content p{
+    display: flex;
+    justify-content: center;
+}
+
+.info-com .card-content p span, .info-post .card-content p span{
+    font-size: 48px;
+    padding-right: 10px;
+}
+
+.card-action a{
+    position: relative;
+    padding-right: 50px;
+}
+
+.card-action a:after {
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 50%;
+    width: 40px;
+    height: 2px;
+    background-color: #fff;
+}
+
+.collapsible-header {
+    background-color: #64b5f6;
+}
+
+.collapsible-body {
+    background-color: #fff;
+}
+
+.thumbnail img{
+    width: 150px;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 /**

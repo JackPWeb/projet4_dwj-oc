@@ -12,29 +12,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
     <link rel="stylesheet" type="text/css" href="css/app.css">
-
 </head>
 
 <body>
-    
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+
     <?= $content; ?>
- 
-    <footer class="page-footer position-absolute">
-        <div class="footer-copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col s12">
-                        © 2018 JackPWeb
-                    </div>
-                </div>
-            </div>       
-        </div>
-    </footer>
-    
+
     <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <script src="js/app.js"></script>
 
 </body>
 </html>

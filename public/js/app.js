@@ -150,23 +150,24 @@ $(document).ready(function(){
 	* ----------------------------------------------------------------------------------------
 	*/
 
-	var ias = jQuery.ias({
-  		container:  '#chapters-list',
-  		item:       '.single-chapter',
-  		pagination: '#pagination-chapter',
-  		next:       '.suivant'
-	});
+	if (document.getElementById('chapitres')) {
+        var ias = jQuery.ias({
+	  		container:  '#chapters-list',
+	  		item:       '.single-chapter',
+	  		pagination: '#pagination-chapter',
+	  		next:       '.suivant'
+		});
 
-	ias.extension(new IASSpinnerExtension({
-	    src: 'img/loader.gif'
-	}));
+		ias.extension(new IASSpinnerExtension({
+		    src: 'img/loader.gif'
+		}));
 
-	ias.extension(new IASTriggerExtension({
-	    text: 'Afficher les autres chapitres',
-	    offset: 1
-	}));
+		ias.extension(new IASTriggerExtension({
+		    text: 'Afficher les autres chapitres',
+		    offset: 1
+		}));
+    }
 
-	
 	/**
 	* ----------------------------------------------------------------------------------------
 	*    Ajax Report Comment

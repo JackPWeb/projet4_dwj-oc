@@ -15,39 +15,25 @@
 
 </head>
 
-<body>
+<body class="admin-template">
     <div id="loader-wrapper">
         <div id="loader"></div>
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
     </div>
     
-    <nav role="navigation">
-        <div class="nav-wrapper container"><a id="logo-container" href="index.php" title="Retourner à la page d'accueil" class="brand-logo">J~Forteroche</a>
+    <nav class="blue lighten-2" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="?p=admin.home.index" title="Retourner à la page d'accueil" class="brand-logo">J~Forteroche</a>
             <ul class="right hide-on-med-and-down">
-                <li class="active"><a href="index.php">Accueil</a></li>
-                <li><a href="?p=posts.index">Chapitres</a></li>
-                <?php 
-                if (isset($_SESSION['auth'])) {
-                    echo '<li><a href="?p=admin.home.index">Cockpit</a></li>';
-                    echo '<li><a href="?p=users.logout">Déconnexion</a></li>';
-                }else{
-                    echo '<li><a href="?p=users.login">Connexion</a></li>';
-                }
-                ?>
+                <li class="active"><a href="?p=admin.home.index">Accueil</a></li>
+                <li><a href="?p=home.index" title="Retourner au site">Site</a></li>
+                <li><a href="?p=users.logout" title="Se déconnecter">Déconnexion</a></li>
             </ul>
 
             <ul id="nav-mobile" class="side-nav">
-                <li><a href="index.php">Accueil</a></li>
-                <li><a href="?p=posts.index">Chapitres</a></li>
-                <?php 
-                if (isset($_SESSION['auth'])) {
-                    echo '<li><a href="?p=admin.home.index">Cockpit</a></li>';
-                    echo '<li><a href="?p=users.logout">Déconnexion</a></li>';
-                }else{
-                    echo '<li><a href="?p=users.login">Connexion</a></li>';
-                }
-                ?>
+                <li><a href="?p=admin.home.index">Accueil</a></li>
+                <li><a href="?p=home.index" title="Retourner au site">Site</a></li>
+                <li><a href="?p=users.logout" title="Se déconnecter">Déconnexion</a></li>
             </ul>
 
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -74,8 +60,6 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-
-    <script type="text/javascript" src="js/libs/ias/jquery-ias.min.js"></script>
 
     <script src="js/app.js"></script>
 

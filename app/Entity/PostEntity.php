@@ -56,4 +56,15 @@
 			return $html;			
 		}
 
+		public function getStatus(){
+			if ($this->posted == '0') {
+				$html = 'Privé';
+			}
+			else{
+				$html = 'Public';
+			}
+
+			return $html;
+		}
+
 	}

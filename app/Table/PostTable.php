@@ -30,6 +30,14 @@
 		    return $this->query("SELECT * FROM posts WHERE posted= '1' ORDER BY title DESC");
 	  	}
 
+	  	/**
+		* Recupere tous les articles uniquement priver
+		*/
+
+		public function allPrivate(){
+		    return $this->query("SELECT * FROM posts WHERE posted= '0' ORDER BY title DESC");
+	  	}
+
 		/**
 		* Recupere les x derniers articles
 		*/

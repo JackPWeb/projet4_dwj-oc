@@ -52,4 +52,8 @@
 			return $this->query("INSERT INTO {$this->table} SET $sql_part", $attributes, true);
 		}
 
+		public function count(){
+			return $this->query("SELECT COUNT(id) as nbTotal FROM {$this->table}");
+		}
+
 	}
