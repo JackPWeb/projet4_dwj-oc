@@ -1012,11 +1012,12 @@ textarea.materialize-textarea:focus:not([readonly]){
 
 /**
 * ----------------------------------------------------------------------------------------
-*    Admin Comments
+*    Admin Comments + Admin Posts
 * ----------------------------------------------------------------------------------------
 */
 
-#comments-admin table{
+#comments-admin table, 
+#chapters-admin table{
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
     border-top: 1px solid #ddd;
     border-right: 1px solid #ddd;
@@ -1024,17 +1025,21 @@ textarea.materialize-textarea:focus:not([readonly]){
     margin-bottom: 30px;
 }
 
-#comments-admin table thead tr{
+#comments-admin table thead tr, 
+#chapters-admin table thead tr{
     background-color: #64b5f6;
     color: #fff;
 }
 
-#comments-admin table tbody{
+#comments-admin table tbody, 
+#chapters-admin table tbody{
     background-color: #fff;
 }
 
 #comments-admin table td, 
-#comments-admin table th{
+#comments-admin table th, 
+#chapters-admin table td, 
+#chapters-admin table th{
     padding: 15px;
     border-radius: 0;
 }
@@ -1043,8 +1048,40 @@ textarea.materialize-textarea:focus:not([readonly]){
     background-color: #64b5f6;
 }
 
-.form-action a:first-of-type{
+#comments-admin .form-action a:first-of-type, 
+#chapters-admin .form-action a:first-of-type{
     margin-right: 10px;
+}
+
+#comments-admin .modal{
+    border-top: 3px solid #64b5f6;
+}
+
+#comments-admin .modal-content{
+    text-align: center;
+}
+
+#comments-admin .modal-content .modal-author{
+    border-bottom: 3px dotted #64b5f6;
+    letter-spacing: 2px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+#comments-admin .modal-content .modal-author span{
+    font-weight: 700;
+}
+
+#comments-admin .modal-content .modal-comment{
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.66em;
+    letter-spacing: 0.02em;
+    font-family: Gentium Book Basic;
+}
+
+.modal .modal-close:hover {
+    color: #ef5350;
 }
 
 /**

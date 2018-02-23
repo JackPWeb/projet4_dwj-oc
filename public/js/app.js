@@ -199,6 +199,12 @@ $(document).ready(function(){
 	* ----------------------------------------------------------------------------------------
 	*/
 
-    $('.modal').modal();
+    $('.modal').modal({
+		ready: function() {
+        	$('.modal-footer a').click(function (e) {
+	    		e.preventDefault();
+	        });
+      	}
+    });
 
 });

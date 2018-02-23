@@ -43,14 +43,20 @@
 								    		</td>
 								  		</tr>
 
-								  		<div class="modal" id="show-comment_<?= $comment->id; ?>">
-									    	<div class="modal-content">
-									    		<p><?= $comment->author; ?> à écrit :</p>
-									    		<p><?= $comment->comment; ?></p>
+								  		<div class="modal bottom-sheet" id="show-comment_<?= $comment->id; ?>">
+									    	<div class="container">
+									    		<div class="row">
+									    			<div class="col s12">
+									    				<div class="modal-content">
+												    		<p class="modal-author"><span><?= $comment->author; ?></span> à écrit :</p>
+												    		<p class="modal-comment"><?= $comment->comment; ?></p>
+												    	</div>
+												    	<div class="modal-footer">
+												      		<a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Fermer</a>
+													    </div>
+									    			</div>
+									    		</div>
 									    	</div>
-									    	<div class="modal-footer">
-									      		<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fermer</a>
-										    </div>
 										</div>
 							  		<?php endforeach ?>
 								</tbody>
