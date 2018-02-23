@@ -52,6 +52,14 @@
 	  	}
 
 	  	/**
+		* Recupere les commentaires par date puis limite en fonction de la pagination
+		*/
+
+	  	public function allCommentsByDate($var){
+		    return $this->query("SELECT * FROM comments ORDER BY comment_date DESC LIMIT $var");
+	  	}
+
+	  	/**
 		* Recupere les commentaires signaler
 		*/
 

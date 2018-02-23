@@ -26,12 +26,14 @@
         <div class="nav-wrapper container"><a id="logo-container" href="?p=admin.home.index" title="Retourner à la page d'accueil" class="brand-logo">J~Forteroche</a>
             <ul class="right hide-on-med-and-down">
                 <li class="active"><a href="?p=admin.home.index">Accueil</a></li>
+                <li><a href="?p=admin.comments.index">Commentaires</a></li>
                 <li><a href="?p=home.index" title="Retourner au site">Site</a></li>
                 <li><a href="?p=users.logout" title="Se déconnecter">Déconnexion</a></li>
             </ul>
 
             <ul id="nav-mobile" class="side-nav">
                 <li><a href="?p=admin.home.index">Accueil</a></li>
+                <li><a href="?p=admin.comments.index">Commentaires</a></li>
                 <li><a href="?p=home.index" title="Retourner au site">Site</a></li>
                 <li><a href="?p=users.logout" title="Se déconnecter">Déconnexion</a></li>
             </ul>

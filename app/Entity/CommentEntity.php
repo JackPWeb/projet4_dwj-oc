@@ -40,9 +40,15 @@
 			return $html;
 		}
 
+		/**
+		* Affiche l'extrait du commentaire
+		*/
+
 		public function getExcerpt(){
-			$html = '<p>' . substr($this->comment, 0 ,100) . '...</p>';
+			$text = substr($this->comment, 0 ,75);
 			
+			$html = '<p>' . substr($text, 0 ,strrpos($text, ' ')) . ' ...</p>';
+
 			return $html;
 		}
 		

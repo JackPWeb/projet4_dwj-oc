@@ -1012,6 +1012,43 @@ textarea.materialize-textarea:focus:not([readonly]){
 
 /**
 * ----------------------------------------------------------------------------------------
+*    Admin Comments
+* ----------------------------------------------------------------------------------------
+*/
+
+#comments-admin table{
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    margin-bottom: 30px;
+}
+
+#comments-admin table thead tr{
+    background-color: #64b5f6;
+    color: #fff;
+}
+
+#comments-admin table tbody{
+    background-color: #fff;
+}
+
+#comments-admin table td, 
+#comments-admin table th{
+    padding: 15px;
+    border-radius: 0;
+}
+
+#comments-admin .pagination li.active {
+    background-color: #64b5f6;
+}
+
+.form-action a:first-of-type{
+    margin-right: 10px;
+}
+
+/**
+* ----------------------------------------------------------------------------------------
 *    Media Queries
 * ----------------------------------------------------------------------------------------
 */

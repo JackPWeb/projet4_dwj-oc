@@ -1,12 +1,10 @@
-403:
+Gestion des commentaires:
 
-- Ajout vue 403
-- Maj Core / Controller / controller -> forbidden()
-- Maj template -> remove login, notFound -> add empty
-
-Home dashboard:
-
- - Ajout App / Admin / HomeController -> delete() -> Suppression des commentaires
- - Ajout des actions validation / suppression de la home -> vue + controller
- - Maj Core / Table / Table -> delete()
- - Maj Post/Comment Table
+- Ajout de la vue commentaires -> Views / Admin / Comments -> index
+- Ajout methode allCommentsByDate -> CommentTable pour l'affichage avec la pagination
+- Ajout du controller Admin / CommentsController
+- CommentsController -> index -> gestion de la vue + pagination
+- CommentsController -> delete -> gestion de la suppression
+- Maj app.css -> ajout du style de la page admin -> commentaires
+- Maj CommentEntity -> excerpt
+- Maj template admin -> link commentaires
