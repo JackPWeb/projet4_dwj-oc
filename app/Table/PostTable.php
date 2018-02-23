@@ -22,6 +22,10 @@
 			return $this->query("SELECT * FROM posts WHERE id = ? AND posted= '1'", [$id], true);
 		}
 
+		public function test($id){
+			return $this->query("SELECT * FROM posts WHERE id = ?", [$id], true);
+		}
+
 	  	/**
 		* Recupere tous les articles uniquement public
 		*/

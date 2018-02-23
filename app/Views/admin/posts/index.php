@@ -10,7 +10,7 @@
 				<div id="resume-allPosts">
 					<div class="row">
 						<div class="col s12">
-							<p><a href="#" class="btn btn-success blue lighten-2">Ajouter</a></p>
+							<p><a href="?p=admin.posts.add" class="btn btn-success blue lighten-2">Ajouter</a></p>
 
 							<table class="highlight">
 								<thead>
@@ -32,7 +32,7 @@
 								    		<td class="<?= $post->status; ?>"><?= $post->status; ?></td>
 								    		<td>
 								    			<div class="form-action">
-								    				<a href="#" class="btn-floating green"><i class="material-icons">edit</i></a>
+								    				<a href="?p=admin.posts.edit&id=<?= $post->id; ?>" class="btn-floating green"><i class="material-icons">edit</i></a>
 
 									    			<form action="?p=admin.posts.delete" method="post">
 									    				<input type="hidden" name="id" value="<?= $post->id; ?>">

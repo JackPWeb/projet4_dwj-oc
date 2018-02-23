@@ -18,9 +18,17 @@
 			return $html;
 		}
 
-		public function getImage(){		
-			$html = '<img class="responsive-img" src="img/chapitres/' . $this->image_featured . '" alt="Image en vedette du '. $this->title .'">';
-
+		public function getImage(){
+			if ($this->image_featured == 'default.jpg') {
+				$html = '<img class="responsive-img" src="img/' . $this->image_featured . '" alt="Image en vedette par defaut">';
+			}
+			elseif($this->image_featured == ''){
+				$html = '<img class="responsive-img" src="img/default.jpg" alt="Image en vedette par defaut">';
+			}
+			else{
+				$html = '<img class="responsive-img" src="img/chapitres/' . $this->image_featured . '" alt="Image en vedette du '. $this->title .'">';
+			}
+			
 			return $html;
 		}
 

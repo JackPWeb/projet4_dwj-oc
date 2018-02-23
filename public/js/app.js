@@ -207,4 +207,34 @@ $(document).ready(function(){
       	}
     });
 
+    /**
+	* ----------------------------------------------------------------------------------------
+	*    Dropify
+	* ----------------------------------------------------------------------------------------
+	*/
+
+	$('.dropify').dropify({
+		messages: {
+			default: 'Glissez-déposez un fichier ici ou cliquez',
+			replace: 'Glissez-déposez un fichier ici ou cliquez pour remplacer',
+			remove: 'Supprimer',
+			error: 'Désolé, le fichier est trop volumineux'
+		}
+	});
+
+	tinymce.init({
+        selector: "textarea",
+        
+        menubar: false,
+        plugins: [
+            'advlist autolink lists link image charmap print preview anchor textcolor',
+            'searchreplace visualblocks code fullscreen',
+            'insertdatetime media table contextmenu paste code help wordcount'
+       ],
+       height: 400,
+       toolbar: 'formatselect | undo redo | bold italic underline forecolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | link image',
+       language_url: 'js/libs/tinymce/langs/fr_FR.js',
+       language: 'fr_FR',
+    });
+
 });

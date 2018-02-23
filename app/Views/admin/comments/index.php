@@ -27,8 +27,8 @@
 							  			<tr>
 								    		<td><?= $comment->post_id; ?></td>
 								    		<td><?= $comment->date; ?></td>
-								    		<td><?= $comment->author; ?></td>
-								    		<td><?= $comment->excerpt; ?></td>
+								    		<td class="comment-author"><?= $comment->author; ?></td>
+								    		<td class="comment-excerpt"><?= $comment->excerpt; ?></td>
 								    		<td>
 								    			<div class="form-action">
 									    			<a href="#show-comment_<?= $comment->id; ?>" class="btn-floating green modal-trigger">

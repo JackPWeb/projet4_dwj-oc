@@ -1,11 +1,9 @@
-Maj Page commentaire:
+Maj page chapitre:
 
-- Ajout style modal
-- Maj excerpt
-
-Ajout page chapitre:
-
-- Ajout App / Admin / PostsController ->index
-- Ajout Views / admin / posts / index -> vue Chapitres
-- Maj Views / templates / admin -> link chapitre
-- Ajout style vue chapitre
+- Ajout methode delete / add / edit -> app / Controller / Admin / PostsController
+- Gestion edition / création des chapitres
+- Ajout du tinymce + gestion des images
+- Ajout de la vue edit (add)
+- Maj postTable
+- Maj app.css + app.js + template admin
+- Maj PostEntity -> getImage()
