@@ -17,7 +17,7 @@
 				              		<p class="center-align"><span><?= $totalComment[0]->nbTotal; ?></span> aux totals</p>
 				            	</div>
 				            	<div class="card-action">
-				              		<a href="?p=admin.comments.index" class="white-text">Accéder aux commentaires</a>
+				              		<a href="administrer-mes-commentaires" class="white-text">Accéder aux commentaires</a>
 				            	</div>
 				          	</div>
 				        </div>
@@ -28,7 +28,7 @@
 				              		<p class="center-align"><span><?= $totalPost[0]->nbTotal; ?></span> aux totals</p>
 				            	</div>
 				            	<div class="card-action">
-				              		<a href="?p=admin.posts.index" class="white-text">Accéder aux chapitres</a>
+				              		<a href="administrer-mes-chapitres" class="white-text">Accéder aux chapitres</a>
 				            	</div>
 				          	</div>
 				        </div>
@@ -42,14 +42,14 @@
 							    <li>
 							      	<div class="collapsible-header white-text active"><i class="material-icons">announcement</i>Commentaires Signaler</div>
 							      	<div class="collapsible-body">
-							      		<table class="highlight">
+							      		<table class="highlight responsive-table">
 							      			<?php 
 									  			if (!empty($comments_signaled)) {
 									  				?>
 								      			<thead>
 											  		<tr>
 											      		<th>Chapitre</th>
-											      		<th>Posté le</th>
+											      		<th>Posté</th>
 											      		<th>Autheur</th>
 											      		<th>Commentaire</th>
 											      		<th>Actions</th>
@@ -99,7 +99,7 @@
 							    <li>
 							      	<div class="collapsible-header white-text active"><i class="material-icons">visibility_off</i>Article non publié</div>
 							      	<div class="collapsible-body">
-							      		<table class="highlight">
+							      		<table class="highlight responsive-table">
 									  		<?php 
 									  			if (!empty($posts)) {
 									  				?>

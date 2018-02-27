@@ -36,7 +36,7 @@
 						}
 					?>
 					
-					<a class="back-to-list tooltipped" href="?p=posts.index" title="Retourner aux chapitres" data-position="top" data-delay=".5" data-tooltip="Retourner aux chapitres">
+					<a class="back-to-list tooltipped" href="chapitres" title="Retourner aux chapitres" data-position="top" data-delay=".5" data-tooltip="Retourner aux chapitres">
 						<i class="material-icons">apps</i>
 					</a>
 
@@ -76,7 +76,8 @@
 					      			<?= $comment->date; ?>
 					         		<p class="commentaire-comment"><?= $comment->comment; ?></p>
 
-						      		<?php if ($comment->signaled == '1'){
+						      		<?php						      		
+					      		 	if ($comment->signaled == '1'){
 						      			?>
 											<a id="<?= $comment->id; ?>" class="secondary-content comment-report" title="Ce Commentaire à été signalé">
 						      					<i class="material-icons">record_voice_over</i>
@@ -88,7 +89,7 @@
 						      					<i class="material-icons">record_voice_over</i>
 						      				</a>
 						      			<?php
-						      		}	
+						      		}
 						      		?>
 						    	</li>
 						    	<?php
@@ -103,7 +104,6 @@
 						}
 						?>    		
 				  	</ul>
-
 				</div>
 
 				<?php
@@ -181,7 +181,7 @@
 				  	
 				</div>
 				<div class="more-link right-align">
-					<a href="?p=posts.index">Retourner aux chapitres</a>
+					<a href="chapitres">Retourner aux chapitres</a>
 				</div>
 			</div>
 		</div>

@@ -4,7 +4,7 @@
 			<div class="col s12">
 
 				<div class="section-title">
-					<h1 class="main-title">Commentaire</h1>
+					<h1 class="main-title">Commentaires</h1>
 					<div class="subtitle">Administrer vos commentaires:</div>
 				</div>
 

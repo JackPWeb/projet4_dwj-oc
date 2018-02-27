@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
     <link rel="shortcut icon" href="img/favicon.jpg">
     <title><?= $title; ?></title>
+    <base href="http://localhost/projet4_oc/" >
     
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -22,30 +23,30 @@
         <div class="loader-section section-right"></div>
     </div>
     
-    <nav role="navigation">
-        <div class="nav-wrapper container"><a id="logo-container" href="index.php" title="Retourner à la page d'accueil" class="brand-logo">J~Forteroche</a>
+    <nav id="main-nav" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="accueil" title="Retourner à la page d'accueil" class="brand-logo">J~Forteroche</a>
             <ul class="right hide-on-med-and-down">
-                <li class="active"><a href="index.php">Accueil</a></li>
-                <li><a href="?p=posts.index">Chapitres</a></li>
+                <li class="active"><a href="accueil" title="Retourner à la page d'accueil">Accueil</a></li>
+                <li><a href="chapitres" title="La liste des chapitres">Chapitres</a></li>
                 <?php 
                 if (isset($_SESSION['auth'])) {
-                    echo '<li><a href="?p=admin.home.index">Cockpit</a></li>';
-                    echo '<li><a href="?p=users.logout">Déconnexion</a></li>';
+                    echo '<li><a href="cockpit" title="Accéder au cockpit">Cockpit</a></li>';
+                    echo '<li><a href="deconnexion" title="Se déconnecter">Déconnexion</a></li>';
                 }else{
-                    echo '<li><a href="?p=users.login">Connexion</a></li>';
+                    echo '<li><a href="connexion" title="Se connecter">Connexion</a></li>';
                 }
                 ?>
             </ul>
 
             <ul id="nav-mobile" class="side-nav">
-                <li><a href="index.php">Accueil</a></li>
-                <li><a href="?p=posts.index">Chapitres</a></li>
+                <li><a href="accueil" title="Retourner à la page d'accueil">Accueil</a></li>
+                <li><a href="chapitres" title="La liste des chapitres">Chapitres</a></li>
                 <?php 
                 if (isset($_SESSION['auth'])) {
-                    echo '<li><a href="?p=admin.home.index">Cockpit</a></li>';
-                    echo '<li><a href="?p=users.logout">Déconnexion</a></li>';
+                    echo '<li><a href="cockpit" title="Accéder au cockpit">Cockpit</a></li>';
+                    echo '<li><a href="deconnexion" title="Se déconnecter">Déconnexion</a></li>';
                 }else{
-                    echo '<li><a href="?p=users.login">Connexion</a></li>';
+                    echo '<li><a href="connexion" title="Se connecter">Connexion</a></li>';
                 }
                 ?>
             </ul>

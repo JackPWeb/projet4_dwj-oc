@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col s12">
 				<div class="section-title">
-					<h1 class="main-title">Chapitre</h1>
+					<h1 class="main-title">Chapitres</h1>
 					<div class="subtitle">Administrer vos chapitres:</div>
 				</div>
 
@@ -12,7 +12,7 @@
 						<div class="col s12">
 							<p><a href="?p=admin.posts.add" class="btn btn-success blue lighten-2">Ajouter</a></p>
 
-							<table class="highlight">
+							<table class="highlight responsive-table">
 								<thead>
 							  		<tr>
 							      		<th>ID</th>

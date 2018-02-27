@@ -7,6 +7,5 @@
 	* 
 	*/
 	class UserTable extends Table {
-
+		
 	}
-?>

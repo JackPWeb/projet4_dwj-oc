@@ -64,7 +64,7 @@
 						<?php endforeach ?>
 					</div>
 					<div class="more-link right-align">
-						<a href="?p=posts.index">Voir tous les chapitres</a>
+						<a href="chapitres">Voir tous les chapitres</a>
 					</div>
 				</div>
 			</div>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
     <link rel="shortcut icon" href="img/favicon.jpg">
     <title><?= $title; ?></title>
+    <base href="http://localhost/projet4_oc/" >
     
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -24,21 +25,21 @@
     </div>
     
     <nav class="blue lighten-2" role="navigation">
-        <div class="nav-wrapper container"><a id="logo-container" href="?p=admin.home.index" title="Retourner à la page d'accueil" class="brand-logo">J~Forteroche</a>
+        <div class="nav-wrapper container"><a id="logo-container" href="cockpit" title="Retourner à la page d'accueil" class="brand-logo">J~Forteroche</a>
             <ul class="right hide-on-med-and-down">
-                <li class="active"><a href="?p=admin.home.index">Accueil</a></li>
-                <li><a href="?p=admin.posts.index">Chapitres</a></li>
-                <li><a href="?p=admin.comments.index">Commentaires</a></li>
-                <li><a href="?p=home.index" title="Retourner au site">Site</a></li>
-                <li><a href="?p=users.logout" title="Se déconnecter">Déconnexion</a></li>
+                <li class="active"><a href="cockpit" title="Retourner à la page d'accueil">Accueil</a></li>
+                <li><a href="administrer-mes-chapitres" title="Administrer mes chapitres">Mes Chapitres</a></li>
+                <li><a href="administrer-mes-commentaires" title="Administrer mes commentaires">Commentaires</a></li>
+                <li><a href="accueil" title="Retourner sur le site">Site</a></li>
+                <li><a href="deconnexion" title="Se déconnecter">Déconnexion</a></li>
             </ul>
 
             <ul id="nav-mobile" class="side-nav">
-                <li><a href="?p=admin.home.index">Accueil</a></li>
-                <li><a href="?p=admin.posts.index">Chapitres</a></li>
-                <li><a href="?p=admin.comments.index">Commentaires</a></li>
-                <li><a href="?p=home.index" title="Retourner au site">Site</a></li>
-                <li><a href="?p=users.logout" title="Se déconnecter">Déconnexion</a></li>
+                <li><a href="cockpit" title="Retourner à la page d'accueil">Accueil</a></li>
+                <li><a href="administrer-mes-chapitres" title="Administrer mes chapitres">Chapitres</a></li>
+                <li><a href="administrer-mes-commentaires" title="Administrer mes commentaires">Commentaires</a></li>
+                <li><a href="accueil" title="Retourner sur le site">Site</a></li>
+                <li><a href="deconnexion" title="Se déconnecter">Déconnexion</a></li>
             </ul>
 
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>

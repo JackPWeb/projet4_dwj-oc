@@ -79,7 +79,7 @@
 				}
 			}
 
-			$post = $this->Post->test($_GET['id']);
+			$post = $this->Post->findPost($_GET['id']);
 
 			$form = new MaterializeForm($post);
 

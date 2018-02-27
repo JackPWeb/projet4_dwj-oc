@@ -18,7 +18,7 @@
 				$auth = new DBAuth(App::getInstance()->getDb());
 
 				if ($auth->login(htmlspecialchars(trim($_POST['username'])), htmlspecialchars(trim($_POST['password'])))) {
-					header('Location: index.php?p=admin.home.index');
+					header('Location: cockpit');
 				}
 				else{
 					$errors = true;
@@ -34,6 +34,6 @@
 			$auth = new DBAuth(App::getInstance()->getDb());
 			$auth->logout();
 
-			header('Location: index.php');
+			header('Location: accueil');
 		}
 	}

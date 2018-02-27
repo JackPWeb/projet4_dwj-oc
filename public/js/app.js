@@ -107,25 +107,35 @@ $(document).ready(function(){
 
 	/**
 	* ----------------------------------------------------------------------------------------
+	*    Update Current Nav Link 
+	* ----------------------------------------------------------------------------------------
+	*/
+
+  	function BeforeLastURL() {
+	    var url = window.location.href;
+	    var parts = url.split("/");
+	    var beforeLast = parts[parts.length - 1];
+
+	    $("ul.right li").removeClass('active');
+	    $("ul.right li a[href^='"+beforeLast+"']").addClass('active');
+
+	    return beforeLast;
+	}
+
+	window.onload = BeforeLastURL;
+	
+
+	/**
+	* ----------------------------------------------------------------------------------------
 	*    Scroll To About Jean
 	* ----------------------------------------------------------------------------------------
 	*/
 
-	$('a.scroll[href*=#]:not([href=#])').click(function () {
-	    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-	        
-	        var target = $(this.hash);
-
-	        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-
-	        if (target.length) {
-	            $('html,body').animate({
-	                scrollTop: target.offset().top - 120
-	            }, 1000);
-
-	            return false;
-	        }
-	    }
+	$('a.scroll[href*=#]').click(function(event){
+	    $('html, body').animate({
+	        scrollTop: $( $.attr(this, 'href') ).offset().top - 120
+	    }, 1000);
+	    event.preventDefault();
 	});
 
 	/**
@@ -209,32 +219,33 @@ $(document).ready(function(){
 
     /**
 	* ----------------------------------------------------------------------------------------
-	*    Dropify
+	*    Dropify + TinyMce
 	* ----------------------------------------------------------------------------------------
 	*/
 
-	$('.dropify').dropify({
-		messages: {
-			default: 'Glissez-déposez un fichier ici ou cliquez',
-			replace: 'Glissez-déposez un fichier ici ou cliquez pour remplacer',
-			remove: 'Supprimer',
-			error: 'Désolé, le fichier est trop volumineux'
-		}
-	});
+	if (document.getElementById('edit-chapter')) {
+		$('.dropify').dropify({
+			messages: {
+				default: 'Glissez-déposez un fichier ici ou cliquez',
+				replace: 'Glissez-déposez un fichier ici ou cliquez pour remplacer',
+				remove: 'Supprimer',
+				error: 'Désolé, le fichier est trop volumineux'
+			}
+		});
 
-	tinymce.init({
-        selector: "textarea",
-        
-        menubar: false,
-        plugins: [
-            'advlist autolink lists link image charmap print preview anchor textcolor',
-            'searchreplace visualblocks code fullscreen',
-            'insertdatetime media table contextmenu paste code help wordcount'
-       ],
-       height: 400,
-       toolbar: 'formatselect | undo redo | bold italic underline forecolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | link image',
-       language_url: 'js/libs/tinymce/langs/fr_FR.js',
-       language: 'fr_FR',
-    });
-
+		tinymce.init({
+	        selector: "textarea",
+	        
+	        menubar: false,
+	        plugins: [
+	            'advlist autolink lists link image charmap print preview anchor textcolor',
+	            'searchreplace visualblocks code fullscreen',
+	            'insertdatetime media table contextmenu paste code help wordcount'
+	       ],
+	       height: 400,
+	       toolbar: 'formatselect | undo redo | bold italic underline forecolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | link image',
+	       language_url: 'js/libs/tinymce/langs/fr_FR.js',
+	       language: 'fr_FR',
+	    });
+	}
 });

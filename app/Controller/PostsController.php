@@ -105,7 +105,7 @@
 					]);
 
 					if ($result) {
-						header("Location: index.php?p=posts.single&id=" . $_GET['id']);
+						header("Location: chapitre-" . $_GET['id']);
 					}
 				}
 			}

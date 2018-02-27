@@ -36,11 +36,11 @@ h1, h2, h3, h4{
 }
 
 h1{
-    font-size: 46px;
+    font-size: 36px;
 }
 
 h2{
-	font-size: 40px;
+	font-size: 30px;
 }
 
 h3{
@@ -52,7 +52,7 @@ h4{
 }
 
 section{
-	margin: 120px 0;
+	margin: 60px 0;
 }
 
 .section-title {
@@ -138,6 +138,14 @@ nav .brand-logo{
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 1.5rem;
+}
+
+nav ul li a.active {
+    background-color: rgba(0,0,0,0.1);
+}
+
+#sidenav-overlay{
+    z-index: 1;
 }
 
 /**
@@ -464,6 +472,10 @@ nav .brand-logo{
 
 .commentaires-list .collection .collection-item .comment-report{
     color: #e8e8ea;
+}
+
+.commentaires-list .collection .collection-item .signaled{
+    cursor: pointer;
 }
 
 /**
@@ -993,6 +1005,10 @@ textarea.materialize-textarea:focus:not([readonly]){
     background-color: #fff;
 }
 
+.collapsible-body table td p{
+    margin: 0;
+}
+
 .thumbnail img{
     width: 150px;
     margin-left: auto;
@@ -1042,6 +1058,10 @@ textarea.materialize-textarea:focus:not([readonly]){
 #chapters-admin table th{
     padding: 15px;
     border-radius: 0;
+}
+
+#comments-admin table td p{
+    margin: 0;
 }
 
 #comments-admin .pagination li.active {
@@ -1113,6 +1133,10 @@ textarea.materialize-textarea:focus:not([readonly]){
     display: none;
 }
 
+#edit-chapter .edit-form-content .switch label{
+    display: block;
+}
+
 /**
 * ----------------------------------------------------------------------------------------
 *    Tinymce
@@ -1166,8 +1190,27 @@ textarea.materialize-textarea:focus:not([readonly]){
 	.more-link{
 		margin-top: 50px;
 	}
+
+    h1 {
+        font-size: 46px;
+    }
+
+    h2{
+        font-size: 40px;
+    }
+
+    section {
+        margin: 120px 0;
+    }
 }
 
 @media only screen and (min-width: 1200px){
 
+}
+
+/*Only IE !!*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .chapter-desc, .chapter-desc a{
+        width: 100%;
+    }
 }

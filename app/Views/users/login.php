@@ -35,7 +35,7 @@
 			  			</div>
 
 			  			<div class="more-link center-align">
-							<a href="?p=home.index">Retourner à la page d'accueil</a>
+							<a href="accueil" title="Retourner à la page d'accueil">Retourner à la page d'accueil</a>
 						</div>
 					</div>
 				</div>

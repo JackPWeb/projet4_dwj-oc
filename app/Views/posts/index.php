@@ -7,7 +7,7 @@
 					<h1 class="main-title">Chapitres</h1>
 					<div class="subtitle">La liste des <?= $totalPostPublic[0]->nbPost; ?> chapitres</div>
 				</div>
-			
+
 				<div id="chapters-list">
 					<?php foreach ($posts as $post): ?>
 					    <div id="articles_<?= $post->id; ?>" class="single-chapter">
