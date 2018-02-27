@@ -72,24 +72,34 @@
 								?>
 								<li class="collection-item avatar">
 						      		<i class="material-icons circle">person_outline</i>
-						      		<span class="commentaire-title"><?= $comment->author; ?></span>
+						      		<div class="commentaire-title">
+						      			<?php
+						      				if ($comment->author_role == '1') {
+						      					echo '<span class="admin">'.$comment->author.'<span class="role"> - [Admin]</span></span>';
+						      				}else{
+						      					echo $comment->author;
+						      				}
+						      			?>
+					      			</div>
 					      			<?= $comment->date; ?>
 					         		<p class="commentaire-comment"><?= $comment->comment; ?></p>
 
 						      		<?php						      		
-					      		 	if ($comment->signaled == '1'){
+					      		 	if ($comment->author_role == '0') {
+					      		 		if ($comment->signaled == '1'){
 						      			?>
 											<a id="<?= $comment->id; ?>" class="secondary-content comment-report" title="Ce Commentaire à été signalé">
 						      					<i class="material-icons">record_voice_over</i>
 						      				</a>
 						      			<?php
-						      		}else{
-						      			?>
-											<a id="<?= $comment->id; ?>" class="secondary-content signaled" title="Signaler ce commentaire" onclick="Materialize.toast('Ce Commentaire à été signalé', 3000)">
-						      					<i class="material-icons">record_voice_over</i>
-						      				</a>
-						      			<?php
-						      		}
+							      		}else{
+							      			?>
+												<a id="<?= $comment->id; ?>" class="secondary-content signaled" title="Signaler ce commentaire" onclick="Materialize.toast('Ce Commentaire à été signalé', 3000)">
+							      					<i class="material-icons">record_voice_over</i>
+							      				</a>
+							      			<?php
+							      		}
+					      		 	}
 						      		?>
 						    	</li>
 						    	<?php
@@ -113,7 +123,7 @@
 				  			echo '<li class="disabled"><span><i class="material-icons">chevron_left</i></span></li>';
 				  		}
 				  		else{
-				  			echo '<li class="waves-effect"><a href="index.php?p=posts.single&id='.$post->id.'&page='.($pageCourante-1).'"><i class="material-icons">chevron_left</i></a></li>';
+				  			echo '<li class="waves-effect"><a href="chapitres/chapitre-'.$post->id.'\page/'.($pageCourante-1).'"><i class="material-icons">chevron_left</i></a></li>';
 				  		}
 				  		
 				  		for ($i=1; $i <= $pagesTotales; $i++) { 
@@ -121,7 +131,7 @@
 				  				echo '<li class="active"><span>'.$i.'</span></li>';
 				  			}
 				  			else{
-				  				echo '<li class="waves-effect"><a href="index.php?p=posts.single&id='.$post->id.'&page='.$i.'">'.$i.'</a></li>';
+				  				echo '<li class="waves-effect"><a href="chapitres/chapitre-'.$post->id.'\page/'.$i.'">'.$i.'</a></li>';
 				  			}
 				  		};
 
@@ -129,7 +139,7 @@
 				  			echo '<li class="disabled"><span><i class="material-icons">chevron_right</i></span></li>';
 				  		}
 				  		else{
-				  			echo '<li class="waves-effect"><a href="index.php?p=posts.single&id='.$post->id.'&page='.($pageCourante+1).'"><i class="material-icons">chevron_right</i></a></li>';
+				  			echo '<li class="waves-effect"><a href="chapitres/chapitre-'.$post->id.'\page/'.($pageCourante+1).'"><i class="material-icons">chevron_right</i></a></li>';
 				  		}
 				  		echo "</ul>";
 					}

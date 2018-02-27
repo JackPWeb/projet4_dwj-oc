@@ -238,12 +238,12 @@ $(document).ready(function(){
 	        
 	        menubar: false,
 	        plugins: [
-	            'advlist autolink lists link image charmap print preview anchor textcolor',
+	            'advlist autolink lists link charmap print preview anchor textcolor',
 	            'searchreplace visualblocks code fullscreen',
 	            'insertdatetime media table contextmenu paste code help wordcount'
 	       ],
 	       height: 400,
-	       toolbar: 'formatselect | undo redo | bold italic underline forecolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | link image',
+	       toolbar: 'formatselect | undo redo | bold italic underline forecolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | link',
 	       language_url: 'js/libs/tinymce/langs/fr_FR.js',
 	       language: 'fr_FR',
 	    });

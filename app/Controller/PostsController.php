@@ -105,6 +105,9 @@
 					]);
 
 					if ($result) {
+						if (isset($_SESSION['auth'])) {
+							$this->Comment->updateRole();
+						}
 						header("Location: chapitre-" . $_GET['id']);
 					}
 				}

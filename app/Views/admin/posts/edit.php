@@ -24,7 +24,18 @@
 							</div>
 
 						    <div class="file-field input-field col s12">
-						    	<input type="file" name="image" class="dropify" data-default-file="<?= 'img/chapitres/' .$post->image_featured; ?>" data-allowed-file-extensions="jpg jpeg png">
+						    	<?php
+						    		if (isset($post->image_featured)) {
+						    			?>
+											<input type="file" name="image" class="dropify" data-default-file="<?= 'img/chapitres/' .$post->image_featured; ?>" data-allowed-file-extensions="jpg jpeg png">
+						    			<?php
+						    		}
+						    		else{
+						    			?>
+											<input type="file" name="image" class="dropify" data-default-file="img/default.jpg" data-allowed-file-extensions="jpg jpeg png">
+						    			<?php
+						    		}
+						    	?>
 						    </div>
 
 							<div class="input-field col s12">
@@ -49,7 +60,7 @@
 
 							<div class="input-field col s12">
 								<?= $form->submit('Modifier'); ?>
-								<a href="?p=admin.posts.index" class="btn waves-effect waves-light red darken-1">Annuler</a>
+								<a href="administrer-mes-chapitres" class="btn waves-effect waves-light red darken-1">Annuler</a>
 							</div>
 						</div>
 					</form>

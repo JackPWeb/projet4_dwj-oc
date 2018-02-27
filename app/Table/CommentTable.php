@@ -40,7 +40,7 @@
 		*/
 
 	  	public function cancelReport(){
-	  		return $this->query("UPDATE comments SET signaled='0' WHERE id='{$_POST['valid-signaled_id']}'");
+	  		return $this->query("UPDATE comments SET signaled='0' WHERE id='{$_POST['cancel-signaled_id']}'");
 	  	}
 
 	  	/**
@@ -65,6 +65,14 @@
 
 		public function signaled(){
 		    return $this->query("SELECT * FROM comments WHERE signaled = '1' ORDER BY comment_date DESC");
+	  	}
+
+	  	/**
+		* Update role if user auth
+		*/
+
+	  	public function updateRole(){
+	  		return $this->query("UPDATE comments SET author_role='1' WHERE author='{$_POST['author']}'");
 	  	}
 
 	}
