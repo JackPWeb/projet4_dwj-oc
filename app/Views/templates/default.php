@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="shortcut icon" href="img/favicon.jpg">
     <title><?= $title; ?></title>
     <base href="http://localhost/projet4_oc/" >
@@ -10,7 +10,7 @@
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="js/libs/materialize/materialize.min.css">
 
     <link rel="stylesheet" type="text/css" href="css/app.css">
 
@@ -23,7 +23,7 @@
         <div class="loader-section section-right"></div>
     </div>
     
-    <nav id="main-nav" role="navigation">
+    <nav id="main-nav">
         <div class="nav-wrapper container"><a id="logo-container" href="accueil" title="Retourner à la page d'accueil" class="brand-logo">J~Forteroche</a>
             <ul class="right hide-on-med-and-down">
                 <li class="active"><a href="accueil" title="Retourner à la page d'accueil">Accueil</a></li>
@@ -74,9 +74,9 @@
     <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="js/libs/materialize/materialize.min.js"></script>
 
-    <script type="text/javascript" src="js/libs/ias/jquery-ias.min.js"></script>
+    <script src="js/libs/ias/jquery-ias.min.js"></script>
 
     <script src="js/app.js"></script>
 

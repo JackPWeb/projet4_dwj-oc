@@ -3,7 +3,7 @@
 	namespace App\Controller;
 
 	use Core\Auth\DBAuth;
-	use Core\HTML\MaterializeForm;
+	use Core\Html\MaterializeForm;
 	use \App;
 
 	class UsersController extends AppController{

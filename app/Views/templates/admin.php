@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="shortcut icon" href="img/favicon.jpg">
     <title><?= $title; ?></title>
     <base href="http://localhost/projet4_oc/" >
@@ -24,11 +24,11 @@
         <div class="loader-section section-right"></div>
     </div>
     
-    <nav class="blue lighten-2" role="navigation">
+    <nav class="blue lighten-2">
         <div class="nav-wrapper container"><a id="logo-container" href="cockpit" title="Retourner à la page d'accueil" class="brand-logo">J~Forteroche</a>
             <ul class="right hide-on-med-and-down">
                 <li class="active"><a href="cockpit" title="Retourner à la page d'accueil">Accueil</a></li>
-                <li><a href="administrer-mes-chapitres" title="Administrer mes chapitres">Mes Chapitres</a></li>
+                <li><a href="administrer-mes-chapitres" title="Administrer mes chapitres">Chapitres</a></li>
                 <li><a href="administrer-mes-commentaires" title="Administrer mes commentaires">Commentaires</a></li>
                 <li><a href="accueil" title="Retourner sur le site">Site</a></li>
                 <li><a href="deconnexion" title="Se déconnecter">Déconnexion</a></li>

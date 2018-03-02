@@ -10,10 +10,10 @@
 
 				<?php if ($errors): ?>
 					<div class="error-message red darken-1">
-						<p><i class="material-icons">error_outline</i> Les identifiants saisies sont incorrects.</p>
+						<p><i class="material-icons">error_outline</i> Les identifiants saisis sont incorrects.</p>
 					</div>
 				<?php endif ?>
-
+				
 				<div class="login-form">
 					<div class="card-panel">
 			  			<div class="row">

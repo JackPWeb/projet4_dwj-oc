@@ -1236,8 +1236,8 @@ textarea.materialize-textarea:focus:not([readonly]){
     margin-bottom: 20px;
 }
 
-#edit-chapter .edit-form-content label{
-    display: none;
+#edit-chapter .edit-form-content label.active{
+    padding-left: 0;
 }
 
 #edit-chapter .edit-form-content .switch label{

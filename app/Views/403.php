@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col s12">
 				<div class="section-title center-align">
-					<h1 class="main-title">ACCES REFUSER</h2>
+					<h1 class="main-title">ACCèS REFUSé</h2>
 					<div class="subtitle">Vous n'avez pas la possibilité d'accéder à ce contenu.</div>
 				</div>
 			</div>

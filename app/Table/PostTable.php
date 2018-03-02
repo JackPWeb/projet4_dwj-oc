@@ -47,7 +47,7 @@
 		*/
 
 		public function last($number){
-		    return $this->query("SELECT * FROM posts WHERE posted = '1' ORDER BY title DESC LIMIT $number");
+		    return $this->query("SELECT * FROM posts WHERE posted = '1' ORDER BY creation_date DESC LIMIT $number");
 	  	}
 
 	  	/**

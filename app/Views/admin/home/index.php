@@ -40,7 +40,7 @@
 		    			<div class="col s12">
 		    				<ul class="collapsible" data-collapsible="accordion">
 							    <li>
-							      	<div class="collapsible-header white-text active"><i class="material-icons">announcement</i>Commentaires Signaler</div>
+							      	<div class="collapsible-header white-text active"><i class="material-icons">announcement</i>Commentaires Signalés</div>
 							      	<div class="collapsible-body">
 							      		<table class="highlight responsive-table">
 							      			<?php 
@@ -50,7 +50,7 @@
 											  		<tr>
 											      		<th>Chapitre</th>
 											      		<th>Posté</th>
-											      		<th>Autheur</th>
+											      		<th>Auteur</th>
 											      		<th>Commentaire</th>
 											      		<th>Actions</th>
 											  		</tr>

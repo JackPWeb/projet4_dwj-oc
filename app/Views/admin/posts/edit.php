@@ -43,7 +43,7 @@
 							</div>
 						
 							<div class="col s12">
-						    	<p>Publié ?</p>
+						    	<p>Publier ?</p>
 						    	<div class="switch">
 								    <label>
 								      Non
@@ -59,7 +59,7 @@
 						  	</div>
 
 							<div class="input-field col s12">
-								<?= $form->submit('Modifier'); ?>
+								<?= $form->submit('Publier'); ?>
 								<a href="administrer-mes-chapitres" class="btn waves-effect waves-light red darken-1">Annuler</a>
 							</div>
 						</div>

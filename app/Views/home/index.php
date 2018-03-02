@@ -2,7 +2,7 @@
 	<div class="parallax-container">
 		<div class="overlay"></div>
 		<div class="parallax">
-			<img src="img/chapitres/chapitre2.jpg">
+			<img src="img/chapitres/chapitre2.jpg" alt="Cover du dernier roman de jean forteroche, billet simple pour l'alaska.">
 		</div>
 		<div class="parallax-content">
 			<div class="container">

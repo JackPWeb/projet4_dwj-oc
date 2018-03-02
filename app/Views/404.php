@@ -4,7 +4,7 @@
 			<div class="col s12">
 				<div class="section-title center-align">
 					<h1 class="main-title">ERREUR 404</h2>
-					<div class="subtitle">Ce que vous cherchiez n'a pas été trouvé.</div>
+					<div class="subtitle">Aucune page ne correspond à votre recherche.</div>
 				</div>
 			</div>
 		</div>

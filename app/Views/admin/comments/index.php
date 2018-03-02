@@ -16,7 +16,7 @@
 							  		<tr>
 							      		<th>Chapitre</th>
 							      		<th>Posté</th>
-							      		<th>Autheur</th>
+							      		<th>Auteur</th>
 							      		<th>Commentaire</th>
 							      		<th>Actions</th>
 							  		</tr>
@@ -67,7 +67,7 @@
 						  			echo '<li class="disabled"><span><i class="material-icons">chevron_left</i></span></li>';
 						  		}
 						  		else{
-						  			echo '<li class="waves-effect"><a href="index.php?p=admin.comments.index&page='.($pageCourante-1).'"><i class="material-icons">chevron_left</i></a></li>';
+						  			echo '<li class="waves-effect"><a href="administrer-mes-commentaires/page/'.($pageCourante-1).'"><i class="material-icons">chevron_left</i></a></li>';
 						  		}
 						  		
 						  		for ($i=1; $i <= $pagesTotales; $i++) { 
@@ -75,7 +75,7 @@
 						  				echo '<li class="active"><span>'.$i.'</span></li>';
 						  			}
 						  			else{
-						  				echo '<li class="waves-effect"><a href="index.php?p=admin.comments.index&page='.$i.'">'.$i.'</a></li>';
+						  				echo '<li class="waves-effect"><a href="administrer-mes-commentaires/page/'.$i.'">'.$i.'</a></li>';
 						  			}
 						  		};
 
@@ -83,7 +83,7 @@
 						  			echo '<li class="disabled"><span><i class="material-icons">chevron_right</i></span></li>';
 						  		}
 						  		else{
-						  			echo '<li class="waves-effect"><a href="index.php?p=admin.comments.index&page='.($pageCourante+1).'"><i class="material-icons">chevron_right</i></a></li>';
+						  			echo '<li class="waves-effect"><a href="administrer-mes-commentaires/page/'.($pageCourante+1).'"><i class="material-icons">chevron_right</i></a></li>';
 						  		}
 						  	?>
 						  	</ul>

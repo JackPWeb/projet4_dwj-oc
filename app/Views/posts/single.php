@@ -88,13 +88,13 @@
 					      		 	if ($comment->author_role == '0') {
 					      		 		if ($comment->signaled == '1'){
 						      			?>
-											<a id="<?= $comment->id; ?>" class="secondary-content comment-report" title="Ce Commentaire à été signalé">
+											<a id="<?= $comment->id; ?>" class="secondary-content comment-report" title="Ce Commentaire a été signalé">
 						      					<i class="material-icons">record_voice_over</i>
 						      				</a>
 						      			<?php
 							      		}else{
 							      			?>
-												<a id="<?= $comment->id; ?>" class="secondary-content signaled" title="Signaler ce commentaire" onclick="Materialize.toast('Ce Commentaire à été signalé', 3000)">
+												<a id="<?= $comment->id; ?>" class="secondary-content signaled" title="Signaler ce commentaire" onclick="Materialize.toast('Ce Commentaire a été signalé', 3000)">
 							      					<i class="material-icons">record_voice_over</i>
 							      				</a>
 							      			<?php
